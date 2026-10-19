@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "YT Boost for Orion",
+  "version": "1.0.0",
+  "description": "Faster, sharper, smoother YouTube on Orion/iOS: quality lock (1440p sweet spot), VP9 guarantee, AV1 block, Stable Volume off, quick start, stall recovery, live stats. No features removed.",
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*", "*://*.youtube-nocookie.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "YT Boost",
+    "default_popup": "popup.html"
+  }
+}
