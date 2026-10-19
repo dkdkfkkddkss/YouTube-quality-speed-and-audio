@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>YT Boost</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { width: 300px; margin: 0; padding: 12px; box-sizing: border-box;
+           font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    h1 { font-size: 15px; margin: 0 0 2px; }
+    .ver { color: #888; font-size: 11px; margin-bottom: 10px; }
+    .sec { font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: .04em;
+           color: #888; margin: 10px 0 4px; }
+    select { width: 100%; padding: 6px; font-size: 13px; border-radius: 8px;
+             border: 1px solid rgba(128,128,128,.4); background: transparent; color: inherit; }
+    .row { display: flex; align-items: flex-start; gap: 8px; padding: 6px 8px; border-radius: 8px; }
+    .row:hover { background: rgba(128,128,128,.12); }
+    .row input { margin-top: 2px; }
+    .row .t { flex: 1; }
+    .row .name { font-weight: 600; }
+    .row .desc { color: #888; font-size: 11px; margin-top: 1px; }
+    .stats { margin-top: 10px; font: 11px/1.5 ui-monospace,Menlo,monospace;
+             background: rgba(128,128,128,.12); border-radius: 8px; padding: 8px;
+             white-space: pre; overflow-x: auto; }
+    .btn { display: block; width: 100%; margin-top: 10px; padding: 8px; font-size: 12px;
+           border-radius: 8px; border: 1px solid rgba(128,128,128,.4);
+           background: transparent; cursor: pointer; }
+    .btn.on { background: #ff2d55; border-color: #ff2d55; color: #fff; }
+    .warn { margin-top: 8px; font-size: 11px; color: #b00; line-height: 1.35; }
+  </style>
+</head>
+<body>
+  <h1>YT Boost <span style="font-weight:400">(Orion)</span></h1>
+  <div class="ver" id="ver">loading…</div>
+
+  <div class="sec">Quality</div>
+  <select id="quality">
+    <option value="hd1440">1440p — sharp (recommended for iPhone 13)</option>
+    <option value="hd1080">1080p — smoothest</option>
+    <option value="hd2160">2160p 4K — only if your network holds</option>
+    <option value="auto">Auto — don't lock (YouTube decides)</option>
+  </select>
+
+  <div class="sec">Audio</div>
+  <div id="audio-toggles"></div>
+
+  <div class="sec">Speed &amp; reliability</div>
+  <div id="speed-toggles"></div>
+
+  <div class="sec">Diagnostics</div>
+  <div id="diag-toggles"></div>
+  <div class="stats" id="stats">open a YouTube tab…</div>
+  <button class="btn" id="apply">Apply to current tab</button>
+  <div class="warn" id="warn" hidden></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
