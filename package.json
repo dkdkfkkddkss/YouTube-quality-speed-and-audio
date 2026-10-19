@@ -1,0 +1,12 @@
+{
+  "name": "yt-orion-boost",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Quality/speed extension for YouTube on Orion iOS. Dev deps used only for tests.",
+  "scripts": {
+    "test": "node tests/run-tests.js"
+  },
+  "devDependencies": {
+    "jsdom": "^24.0.0"
+  }
+}
